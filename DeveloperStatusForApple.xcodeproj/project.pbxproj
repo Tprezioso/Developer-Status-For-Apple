@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		556FC78428130A1800EA7C2A /* DeveloperStatusForAppleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FC78328130A1800EA7C2A /* DeveloperStatusForAppleApp.swift */; };
-		556FC78628130A1800EA7C2A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FC78528130A1800EA7C2A /* ContentView.swift */; };
 		556FC78828130A1900EA7C2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556FC78728130A1900EA7C2A /* Assets.xcassets */; };
 		556FC78B28130A1900EA7C2A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 556FC78A28130A1900EA7C2A /* Preview Assets.xcassets */; };
+		556FC79328130B2200EA7C2A /* AppleDeveloperStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FC79228130B2200EA7C2A /* AppleDeveloperStatusView.swift */; };
+		556FC79528130BCE00EA7C2A /* StatusComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556FC79428130BCE00EA7C2A /* StatusComponents.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		556FC78028130A1800EA7C2A /* DeveloperStatusForApple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeveloperStatusForApple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		556FC78328130A1800EA7C2A /* DeveloperStatusForAppleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeveloperStatusForAppleApp.swift; sourceTree = "<group>"; };
-		556FC78528130A1800EA7C2A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		556FC78728130A1900EA7C2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		556FC78A28130A1900EA7C2A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		556FC78C28130A1900EA7C2A /* DeveloperStatusForApple.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeveloperStatusForApple.entitlements; sourceTree = "<group>"; };
+		556FC79228130B2200EA7C2A /* AppleDeveloperStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDeveloperStatusView.swift; sourceTree = "<group>"; };
+		556FC79428130BCE00EA7C2A /* StatusComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusComponents.swift; sourceTree = "<group>"; };
+		556FC7962813111F00EA7C2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +55,10 @@
 		556FC78228130A1800EA7C2A /* DeveloperStatusForApple */ = {
 			isa = PBXGroup;
 			children = (
+				556FC7962813111F00EA7C2A /* Info.plist */,
 				556FC78328130A1800EA7C2A /* DeveloperStatusForAppleApp.swift */,
-				556FC78528130A1800EA7C2A /* ContentView.swift */,
+				556FC79228130B2200EA7C2A /* AppleDeveloperStatusView.swift */,
+				556FC79428130BCE00EA7C2A /* StatusComponents.swift */,
 				556FC78728130A1900EA7C2A /* Assets.xcassets */,
 				556FC78C28130A1900EA7C2A /* DeveloperStatusForApple.entitlements */,
 				556FC78928130A1900EA7C2A /* Preview Content */,
@@ -139,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				556FC78628130A1800EA7C2A /* ContentView.swift in Sources */,
+				556FC79328130B2200EA7C2A /* AppleDeveloperStatusView.swift in Sources */,
+				556FC79528130BCE00EA7C2A /* StatusComponents.swift in Sources */,
 				556FC78428130A1800EA7C2A /* DeveloperStatusForAppleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +280,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeveloperStatusForApple/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -301,6 +308,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeveloperStatusForApple/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
