@@ -7,7 +7,11 @@
 
 import Foundation
 
-struct Service: Codable {
+struct Service: Codable, Identifiable {
+//    var id = UUID()
+    var id: String {
+            self.serviceName
+        }
     var redirectUrl: String?
     var events: [Event]
     var serviceName: String
