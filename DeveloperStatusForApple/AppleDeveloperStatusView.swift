@@ -9,17 +9,13 @@ import SwiftUI
 
 struct AppleDeveloperStatusView: View {
     @StateObject var stateModel = AppleDeveloperStatusViewStateModel()
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
     
     var body: some View {
         List {
             ForEach(stateModel.status.services) { feature in
                 Text(feature.serviceName)
             }
-        }
+        }.listStyle(.sidebar)
         .frame(width: 300, height: 500, alignment: .center)
         .onAppear {
             Task { @MainActor in
