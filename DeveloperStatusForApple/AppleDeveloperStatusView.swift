@@ -57,6 +57,7 @@ class AppleDeveloperStatusViewStateModel: ObservableObject {
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
+        // Used to trim the excess from the beginning and end of JSON data returned
         let newData = data.subdata(in: Range(13...(data.count - 3)))
         if let components = try? JSONDecoder().decode(StatusComponents.self, from: newData) {
             print(">>\(components.services)")
