@@ -8,7 +8,6 @@
 import Foundation
 
 struct Service: Codable, Identifiable {
-//    var id = UUID()
     var id: String {
             self.serviceName
         }

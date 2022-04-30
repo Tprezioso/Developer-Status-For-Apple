@@ -13,7 +13,14 @@ struct AppleDeveloperStatusView: View {
     var body: some View {
         List {
             ForEach(stateModel.status.services) { feature in
-                Text(feature.serviceName)
+                VStack {
+                    HStack {
+                        Circle()
+                            .frame(width: 10, height: 10)
+                            .foregroundColor(feature.events.isEmpty ? .green : .yellow)
+                        Text(feature.serviceName)
+                    }
+                }
             }
         }.listStyle(.sidebar)
         .frame(width: 300, height: 500, alignment: .center)
@@ -58,7 +65,7 @@ class AppleDeveloperStatusViewStateModel: ObservableObject {
         
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { fatalError("Error while fetching data") }
         // Used to trim the excess from the beginning and end of JSON data returned
-        let newData = data.subdata(in: Range(13...(data.count - 3)))
+        let newData = data.subdata(in: Range(13...(data.count - 4)))
         if let components = try? JSONDecoder().decode(StatusComponents.self, from: newData) {
             print(">>\(components.services)")
             return components
